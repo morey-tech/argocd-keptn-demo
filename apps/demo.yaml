@@ -1,0 +1,24 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo
+spec:
+  destination:
+    name: in-cluster
+    namespace: demo
+  source:
+    path: demo/
+    repoURL: https://github.com/morey-tech/argocd-keptn-demo.git
+    targetRevision: main
+  project: default
+  syncPolicy:
+    managedNamespaceMetadata:
+      annotations:
+        # Annotation to enable Keptn for workloads in this namespace.
+        keptn.sh/lifecycle-toolkit: enabled
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
