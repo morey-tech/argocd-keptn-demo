@@ -7,6 +7,9 @@ namespace: keptn-lifecycle-toolkit-system
 resources:
 - ./config.yaml
 
+patches:
+  - path: ./service.yaml
+
 helmCharts:
 - name: keptn
   includeCRDs: true
