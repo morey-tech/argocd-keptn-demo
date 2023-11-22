@@ -5,7 +5,7 @@ metadata:
 namespace: cert-manager
 
 resources:
-- https://github.com/cert-manager/cert-manager/releases/download/v1.12.2/cert-manager.crds.yaml
+- https://github.com/cert-manager/cert-manager/releases/download/v1.13.2/cert-manager.crds.yaml
 
 helmCharts:
 - name: cert-manager
