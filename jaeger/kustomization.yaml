@@ -6,4 +6,3 @@ namespace: observability
 
 resources:
 - https://github.com/jaegertracing/jaeger-operator/releases/download/v1.46.0/jaeger-operator.yaml
-- ./jaeger.yaml

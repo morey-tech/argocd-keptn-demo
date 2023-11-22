@@ -6,6 +6,7 @@ namespace: keptn-lifecycle-toolkit-system
 
 resources:
 - ./config.yaml
+- ./jaeger.yaml
 
 patches:
   - path: ./service.yaml
