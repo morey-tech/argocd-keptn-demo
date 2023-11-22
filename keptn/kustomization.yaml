@@ -7,9 +7,6 @@ namespace: keptn-lifecycle-toolkit-system
 resources:
 - ./config.yaml
 
-patchesStrategicMerge:
-  - ./argocd-cm.yaml
-
 helmCharts:
 - name: keptn
   includeCRDs: true
