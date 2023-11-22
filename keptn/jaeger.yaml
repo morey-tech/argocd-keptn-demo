@@ -3,4 +3,4 @@ kind: Jaeger
 metadata:
   name: jaeger
 spec:
-  strategy: allInone
+  strategy: allinone
