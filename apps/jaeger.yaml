@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: jaeger
+spec:
+  destination:
+    name: in-cluster
+    namespace: observability
+  source:
+    path: jaeger/
+    repoURL: https://github.com/morey-tech/argocd-keptn-demo.git
+    targetRevision: main
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
