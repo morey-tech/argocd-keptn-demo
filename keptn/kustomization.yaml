@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: keptn
+namespace: keptn-lifecycle-toolkit-system
+
+resources:
+- ./config.yaml
+
+patchesStrategicMerge:
+  - ./argocd-cm.yaml
+
+helmCharts:
+- name: keptn
+  includeCRDs: true
+  # valuesInline:
+  releaseName: keptn
+  version: 0.3.0
+  repo: 'https://charts.lifecycle.keptn.sh'
