@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     path: argocd/
-    repoURL: https://github.com/morey-tech/argocd-v2.9.0-examples.git
+    repoURL: https://github.com/morey-tech/argocd-keptn-demo.git
     targetRevision: main
   syncPolicy:
     automated:
