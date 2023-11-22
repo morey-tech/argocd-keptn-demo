@@ -4,6 +4,7 @@ echo "post-start start" >> ~/status
 
 # this runs in background each time the container starts
 
+kind delete cluster --name argocd-keptn
 kind create cluster --config kind-cluster.yaml
 kubectl apply -k argocd
 kubectl apply -f apps.yaml

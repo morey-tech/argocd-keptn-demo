@@ -32,3 +32,30 @@ $ kubectl -n demo get keptnapp
 NAME           AGE
 keptndemoapp   3m20s
 ```
+
+> Keptn also creates a new application version every time you increment the version label.
+>
+> The PHASE will change as the deployment progresses. A successful deployment is shown as PHASE=Completed
+
+```
+$ kubectl -n demo get keptnappversion
+NAME                          APPNAME        VERSION   PHASE
+keptndemoapp-0.0.1-6b86b273   keptndemoapp   0.0.1     Completed
+keptndemoapp-0.0.2-d4735e3a   keptndemoapp   0.0.2     Completed
+```
+
+> Keptn is generating DORA metrics and OpenTelemetry traces for your deployments.
+> 
+> These metrics are exposed via the Keptn lifecycle operator /metrics endpoint on port 2222.
+> 
+> To see these raw metrics:
+
+```
+SERVICE=$(kubectl get svc -l control-plane=lifecycle-operator -A -ojsonpath="{.items[0].metadata.name}")
+kubectl -n keptn-lifecycle-toolkit-system port-forward svc/$SERVICE 8081:2222
+```
+
+> Access metrics in Prometheus format on [http://localhost:8081/metrics](http://localhost:8081/metrics)
+> 
+> Look for metrics starting with keptn_
+
