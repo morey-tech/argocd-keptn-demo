@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keptn
+spec:
+  destination:
+    name: in-cluster
+    namespace: keptn-lifecycle-toolkit-system
+  source:
+    path: keptn/
+    repoURL: https://github.com/morey-tech/argocd-keptn-demo.git
+    targetRevision: main
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
