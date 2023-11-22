@@ -8,7 +8,7 @@ spec:
     namespace: cert-manager-system
   source:
     path: cert-manager/
-    repoURL: https://github.com/morey-tech/argocd-cert-manager-demo.git
+    repoURL: https://github.com/morey-tech/argocd-keptn-demo.git
     targetRevision: main
   project: default
   syncPolicy:
