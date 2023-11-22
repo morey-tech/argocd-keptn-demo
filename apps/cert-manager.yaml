@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cert-manager
+spec:
+  destination:
+    name: in-cluster
+    namespace: cert-manager-system
+  source:
+    path: cert-manager/
+    repoURL: https://github.com/morey-tech/argocd-cert-manager-demo.git
+    targetRevision: main
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
