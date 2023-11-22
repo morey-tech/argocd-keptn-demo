@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: keptn
+  name: keptn-config
 spec:
   destination:
     name: in-cluster
