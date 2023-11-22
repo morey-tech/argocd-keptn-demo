@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: cert-manager-system
+    namespace: cert-manager
   source:
     path: cert-manager/
     repoURL: https://github.com/morey-tech/argocd-keptn-demo.git
