@@ -4,7 +4,7 @@ metadata:
   name: lifecycle-operator-metrics-service
 spec:
   ports:
-  - name: https
+  - name: metrics
     port: 2222
     protocol: TCP
     targetPort: 8081
