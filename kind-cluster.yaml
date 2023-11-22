@@ -9,3 +9,6 @@ nodes:
   extraPortMappings:
     - containerPort: 31443  # NodePort for Argo CD `argocd-server` service (dashboard).
       hostPort: 8080  # Port on host running the kind cluster.
+  extraPortMappings:
+    - containerPort: 31444  # NodePort for Keptn `lifecycle-operator-metrics-service` service (metrics).
+      hostPort: 8081
