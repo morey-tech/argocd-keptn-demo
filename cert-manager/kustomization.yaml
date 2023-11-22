@@ -4,10 +4,11 @@ metadata:
   name: cert-manager
 namespace: cert-manager-system
 
+resources:
+- https://github.com/cert-manager/cert-manager/releases/download/v1.12.2/cert-manager.crds.yaml
+
 helmCharts:
 - name: cert-manager
-  includeCRDs: true
-  # valuesInline:
   releaseName: cert-manager
   namespace: cert-manager-system
   version: v1.12.2
