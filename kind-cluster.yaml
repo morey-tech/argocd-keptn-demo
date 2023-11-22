@@ -11,3 +11,5 @@ nodes:
       hostPort: 8080  # Port on host running the kind cluster.
     - containerPort: 31444  # NodePort for Keptn `lifecycle-operator-metrics-service` service (metrics).
       hostPort: 8081
+    - containerPort: 31445  # NodePort for Keptn `lifecycle-operator-metrics-service` service (metrics).
+      hostPort: 8082

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jaeger-query
+spec:
+  ports:
+  - name: https
+    port: 16686
+    protocol: TCP
+    targetPort: 8082
+    nodePort: 31445
+  type: NodePort
