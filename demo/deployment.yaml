@@ -12,6 +12,10 @@ spec:
   template:
     metadata:
       labels:
+        # Keptn looks for these 3 labels:
+        #   app.kubernetes.io/part-of
+        #   app.kubernetes.io/name
+        #   app.kubernetes.io/version
         app.kubernetes.io/part-of: keptndemoapp
         app.kubernetes.io/name: nginx
         app.kubernetes.io/version: 0.0.1
