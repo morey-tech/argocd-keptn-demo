@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: observability-stack-grafana
+spec:
+  ports:
+  - name: http-web
+    port: 80         # port on the service
+    protocol: TCP
+    targetPort: 3000 # port on the container
+    nodePort: 31445  # port on the node
+  type: NodePort

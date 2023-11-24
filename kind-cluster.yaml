@@ -11,5 +11,5 @@ nodes:
       hostPort: 8080  # Port on host running the kind cluster.
     - containerPort: 31444  # NodePort for Keptn `lifecycle-operator-metrics-service` service (metrics).
       hostPort: 8081
-    - containerPort: 31445  # NodePort for Keptn `lifecycle-operator-metrics-service` service (metrics).
+    - containerPort: 31445  # NodePort for Grafana `observability-stack-grafana` service (dashboards).
       hostPort: 8082
