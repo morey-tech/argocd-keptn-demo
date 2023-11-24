@@ -8,7 +8,7 @@ namespace: monitoring
 # - 
 
 helmCharts:
-- name: observability-stack
+- name: kube-prometheus-stack
   releaseName: observability-stack
   namespace: monitoring
   version: 48.1.1
