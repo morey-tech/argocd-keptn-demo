@@ -9,13 +9,23 @@ kubectl apply -f apps.yaml
 
 This example includes a `devcontainer` configuration, allowing you to automatically create an environment for testing using the VSCode Dev Containers extension or GitHub Codespaces.
 
-## Accessing the UI
+## Accessing the Argo CD UI
 Navigate to [https://localhost:8080/](https://localhost:8080/) on the machine with the `kind` cluster running.
 
 Get the generated `admin` password.
 ```
 argocd admin initial-password -n argocd
 ```
+
+Or:
+```
+cat ~/argo-cd-admin-password.txt
+```
+
+## Accessing the Grafana UI
+Navigate to [https://localhost:8082/](https://localhost:8082/) on the machine with the `kind` cluster running (the dev container also forwards this port).
+
+The username and password are `admin`.
 
 ## Clean Up
 ```
