@@ -10,3 +10,4 @@ resources:
 patches:
   - path: ./service.yaml
   - path: ./argocd-cm.yaml
+  - path: ./argocd-secret.yaml
